@@ -1,5 +1,5 @@
 const Purchase = require('../../models/purchase');
-// const Item = require('../../models/item');
+const Item = require('../../models/item');
 
 module.exports = {
   cart,
@@ -17,7 +17,9 @@ async function cart(req, res) {
 
 // Add an item to the cart
 async function addToCart(req, res) {
-
+  const cart = await Purchase.getCart(req.user._id);
+  await cart.addItemToCart(req.params.id); 
+  res.json(cart);
 }
 
 // Updates an item's qty in the cart

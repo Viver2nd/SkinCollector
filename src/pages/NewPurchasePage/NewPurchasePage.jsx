@@ -9,7 +9,6 @@ import SkinList from '../../components/SkinList/SkinList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import PurchaseDetail from '../../components/PurchaseDetail/PurchaseDetail';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
-import purchase from '../../../models/purchase';
 
 export default function NewPurchasePage({ user, setUser }) {
   const [skinItems, setSkinItems] = useState([]);
@@ -38,7 +37,12 @@ export default function NewPurchasePage({ user, setUser }) {
   /*--- Event Handlers --- */
   async function handleAddToPurchase(itemId) {
     const updatedCart = await purchasesAPI.addItemToCart(itemId);
-    setCart(updatedCard);
+    setCart(updatedCart);
+  }
+
+  async function handleChangeQty(itemId, newQty) {
+    const updatedCart = await purchasesAPI.setItemQtyInCart(itemId, newQty);
+    setCart(updatedCart);
   }
 
   return (
