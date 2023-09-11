@@ -2,13 +2,14 @@ import './PurchaseDetail.css';
 import LineItem from '../LineItem/LineItem';
 
 // Used to display the details of any order, including the cart (unpaid order)
-export default function PurchaseDetail({ purchase }) {
+export default function PurchaseDetail({ purchase, handleChangeQty }) {
   if (!purchase) return null;
 
   const lineItems = purchase.lineItems.map(item =>
     <LineItem
       lineItem={item}
       isPaid={purchase.isPaid}
+      handleChangeQty={handleChangeQty}
       key={item._id}
     />
   );

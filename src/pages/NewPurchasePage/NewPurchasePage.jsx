@@ -61,7 +61,10 @@ export default function NewPurchasePage({ user, setUser }) {
         skinItems={skinItems.filter(item => item.category.name === activeCat)}
         handleAddToPurchase={handleAddToPurchase}
       />
-      <PurchaseDetail purchase={cart} />
+      <PurchaseDetail
+        purchase={cart}
+        handleChangeQty={handleChangeQty}
+      />
     </main>
   );
 }
