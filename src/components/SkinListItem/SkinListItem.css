@@ -1,4 +1,4 @@
-.MenuListItem {
+.SkinListItem {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -12,7 +12,7 @@
   font-size: 4vmin;
 }
 
-.MenuListItem .emoji {
+.SkinListItem .emoji {
   height: 8vw;
   width: 8vw;
   font-size: 4vw;
@@ -21,18 +21,18 @@
   border-radius: 1vmin;
 }
 
-.MenuListItem .buy {
+.SkinListItem .buy {
   display: flex;
   flex-direction: column;
 }
 
-.MenuListItem .buy span {
+.SkinListItem .buy span {
   font-size: 1.7vw;
   text-align: center;
   color: var(--text-light);
 }
 
-.MenuListItem .name {
+.SkinListItem .name {
   font-size: 2vw;
   text-align: center;
   color: var(--text-light);

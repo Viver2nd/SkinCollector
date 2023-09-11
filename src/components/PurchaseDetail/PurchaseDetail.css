@@ -1,4 +1,4 @@
-.OrderDetail {
+.PurchaseDetail {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -7,18 +7,18 @@
   color: var(--text-light);
 }
 
-.OrderDetail .section-heading {
+.PurchaseDetail .section-heading {
   width: 100%
 }
 
-.OrderDetail .line-item-container {
+.PurchaseDetail .line-item-container {
   margin-top: 3vmin;
   justify-content: flex-start;
   height: calc(100vh - 18vmin);
   width: 100%;
 }
 
-.OrderDetail .total {
+.PurchaseDetail .total {
   width: 100%;
   display: grid;
   grid-template-columns: 18.35vw 5.75vw 5.25vw;
@@ -27,7 +27,7 @@
   border-top: .1vmin solid var(--tan-3);
 }
 
-.OrderDetail .total span {
+.PurchaseDetail .total span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,12 +35,12 @@
   color: var(--text-dark);
 }
 
-.OrderDetail .total span.right {
+.PurchaseDetail .total span.right {
   display: flex;
   justify-content: flex-end;
 }
 
-.OrderDetail .hungry {
+.PurchaseDetail .no-items {
   position: absolute;
   top: 50vh;
   font-size: 2vmin;

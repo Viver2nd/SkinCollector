@@ -1,4 +1,4 @@
-.NewOrderPage {
+.NewPurchasePage {
   height: 100%;
   display: grid;
   grid-template-columns: 1.6fr 3.5fr 3fr;
@@ -7,7 +7,7 @@
   border-radius: 2vmin;
 }
 
-.NewOrderPage aside {
+.NewPurchasePage aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
