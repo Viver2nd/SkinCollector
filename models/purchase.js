@@ -64,8 +64,8 @@ purchaseSchema.methods.addItemToCart = async function (itemId) {
     return cart.save();
   };
 
-  // Instance method to set an item's qty in the cart (will add item if does not exist)
-orderSchema.methods.setItemQty = function(itemId, newQty) {
+// Instance method to set an item's qty in the cart (will add item if does not exist)
+purchaseSchema.methods.setItemQty = function(itemId, newQty) {
   // this keyword is bound to the cart (order doc)
   const cart = this;
   // Find the line item in the cart for the menu item

@@ -3,7 +3,7 @@ import * as itemsAPI from '../../utilities/items-api'
 import * as purchasesAPI from '../../utilities/purchases-api'
 
 import './NewPurchasePage.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../../components/Logo/Logo';
 import SkinList from '../../components/SkinList/SkinList';
 import CategoryList from '../../components/CategoryList/CategoryList';
@@ -15,6 +15,7 @@ export default function NewPurchasePage({ user, setUser }) {
   const [activeCat, setActiveCat] = useState('');
   const [cart, setCart] = useState(null);
   const categoriesRef = useRef([]);
+  const navigate = useNavigate();
 
 
 
@@ -45,6 +46,11 @@ export default function NewPurchasePage({ user, setUser }) {
     setCart(updatedCart);
   }
 
+  async function handleCheckout() {
+    await purchasesAPI.checkout();
+    navigate('/purchases');
+  }
+  
   return (
     <main className="NewPurchasePage">
       <aside>
@@ -64,6 +70,7 @@ export default function NewPurchasePage({ user, setUser }) {
       <PurchaseDetail
         purchase={cart}
         handleChangeQty={handleChangeQty}
+        handleCheckout={handleCheckout}
       />
     </main>
   );
