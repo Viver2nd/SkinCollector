@@ -1,12 +1,12 @@
 :root {
-  --white: #FFFFFF;
-  --tan-1: #FBF9F6;
+  --white: #2D2D2D;
+  --tan-1: #232323;
   --tan-2: #E7E2DD;
   --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
-  --text-light: #968c84;
-  --text-dark: #615954;
+  --tan-4: #232323;
+  --orange: #232323;
+  --text-light: #7D7D7D;
+  --text-dark: #5F5F5F;
 }
 
 *, *:before, *:after {
@@ -119,7 +119,7 @@ input:focus {
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
-  color: var(--white);
+  color: white;
   background-color: var(--orange);
   font-size: 2vmin;
   font-weight: bold;
