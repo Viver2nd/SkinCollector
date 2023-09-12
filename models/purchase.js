@@ -73,7 +73,7 @@ purchaseSchema.methods.setItemQty = function(itemId, newQty) {
   if (lineItem && newQty <= 0) {
     // Calling deleteOne(), removes itself from the cart.lineItems array
     // Note that video shows remove(), which has been removed 😀 in Mongoose v7
-    lineItem.deleteOne();
+    lineItem.remove();
   } else if (lineItem) {
     // Set the new qty - positive value is assured thanks to prev if
     lineItem.qty = newQty;

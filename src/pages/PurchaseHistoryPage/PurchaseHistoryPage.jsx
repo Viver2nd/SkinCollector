@@ -1,4 +1,5 @@
 import { checkToken } from "../../utilities/users-service";
+import './PurchaseHistoryPage.css';
 
 export default function PurchaseHistoryPage() {
   async function handleCheckToken() {
@@ -8,7 +9,7 @@ export default function PurchaseHistoryPage() {
   
   return (
     <>
-      <h1>PurchaseHistoryPage</h1>
+      <h1 className="purchase-complete">Purchase Successful!</h1>
     </>
   );
 }

@@ -20,7 +20,7 @@ export default function PurchaseDetail({ purchase, handleChangeQty, handleChecko
         {purchase.isPaid ?
           <span>PURCHASE <span className="smaller">{purchase.purchaseId}</span></span>
           :
-          <span>NEW PURCHASE</span>
+          <span>BASKET</span>
         }
         <span>{new Date(purchase.updatedAt).toLocaleDateString()}</span>
       </div>

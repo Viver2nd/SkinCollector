@@ -60,7 +60,6 @@ export default function NewPurchasePage({ user, setUser }) {
           activeCat={activeCat}
           setActiveCat={setActiveCat}
         />
-        <Link to="/purchases" className="button btn-sm">PREVIOUS ORDERS</Link>
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       <SkinList
