@@ -5,8 +5,8 @@
   --tan-3: #E2D9D1;
   --tan-4: #232323;
   --orange: #232323;
-  --text-light: #7D7D7D;
-  --text-dark: #5F5F5F;
+  --text-light: #FFFFFF;
+  --text-dark: #7D7D7D;
 }
 
 *, *:before, *:after {
@@ -119,7 +119,7 @@ input:focus {
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
-  color: white;
+  color: #C3C3C3;
   background-color: var(--orange);
   font-size: 2vmin;
   font-weight: bold;
